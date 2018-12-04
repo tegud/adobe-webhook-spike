@@ -57,7 +57,7 @@ provider:
 
 functions:
   challenge:
-    handler: handler.challnege
+    handler: handler.challenge
     events:
       - http:
           method: get
