@@ -56,11 +56,17 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  challenge:
+    handler: handler.challnege
     events:
       - http:
           method: get
+          path: webhook
+  webhook:
+    handler: handler.webhook
+    events:
+      - http:
+          method: post
           path: webhook
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
